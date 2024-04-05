@@ -1,0 +1,608 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+   <link href="./style1.css" rel="stylesheet">
+
+   <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Kode+Mono:wght@400..700&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Kode+Mono:wght@400..700&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Kode+Mono:wght@400..700&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Kode+Mono:wght@400..700&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+<style> 
+
+.show {
+  width: 280px; /* Adjust width as needed */
+  transition: all 0.5s ease;
+}
+
+</style>
+</head>
+<body>
+
+
+    <div class="navbar">
+        <div class="nav-icon">
+            <i class="fa-sharp fa-solid fa-bars" id="logoicon" onclick="toggleNav()" style="cursor: pointer;"></i>
+        </div>
+        <div class="top-logo">
+            <p class="top-text">
+              <i class="fa-solid fa-heart-pulse fa-beat" id="logo-icon" style="color: #ef743c;"></i>Beyond <span id="yoga">Yoga</span></p>
+        </div>
+
+       
+
+
+        <div class="menu-bar">
+            <ul>
+              <li>
+                <a href="#">Yoga<i class="fa-solid fa-chevron-down" style="color: #000000;"></i></a>
+                <div class="sub-menu-1">
+                  <ul>
+                     <li  class="hover-me"><a href="#">Age Group<i class="fa-solid fa-chevron-down" style="color: #000000;"></i></a>
+                         
+                      <div class="sub-menu-2">
+                        <ul>
+                           <li><a href="https://www.youtube.com/watch?v=FB5-7tIiX-I">0-18 years</a></li>
+                           <li><a href="https://www.youtube.com/watch?v=Q5_PSTXjGt4">19-45 years</a></li>
+                           <li><a href="https://www.youtube.com/watch?v=dB1x5hHZ_vg">45-60 years</a></li>
+                           <li><a href="https://www.youtube.com/watch?v=laIWV6qJWbk">Above 60 years</a></li>
+                           <!-- <li><a href="#"></a></li> -->
+                           
+                        </ul>
+                      </div>
+                    </li>
+
+                    <li  class="hover-me"><a href="#">Diseases<i class="fa-solid fa-chevron-down" style="color: #000000;"></i></a>
+                         
+                      <div class="sub-menu-2">
+                        <ul>
+                           <li><a href="https://www.youtube.com/watch?v=pB41zLZ0r-0">Back Pain</a></li>
+                           <li><a href="https://www.youtube.com/watch?v=e3KPU-ZyrGk">Blood Pressure</a></li>
+                           <li><a href="https://www.youtube.com/watch?v=D3EHHHJMkxY">Eye Care</a></li>
+                           <li><a href="https://www.youtube.com/watch?v=19jSUzUIvlM">PCOD</a></li>
+                           <li><a href="https://www.youtube.com/watch?v=IuwjSYSAKWI">Skin Care</a></li>
+                           <li><a href="https://www.youtube.com/watch?v=mRK6Ox1YG8E">Cancer</a></li>
+                           <!-- <li><a href="#"></a></li> -->
+                           
+                        </ul>
+                      </div>
+                    </li>
+                     <!-- <li><a href="#">For Disease</a></li> -->
+                     <li class="hover-me"><a href="#">Types<i class="fa-solid fa-chevron-down" style="color: #000000;"></i></a>
+                      <div class="sub-menu-2">
+                        <ul>
+                           <li><a href="https://www.youtube.com/watch?v=M3-IAMGAKvM">Vinyasa</a></li>
+                           <li><a href="https://www.youtube.com/watch?v=TO5DAbT5R2s">Hatha</a></li>
+                           <li><a href="https://www.youtube.com/watch?v=uYDQES3d5fI&t=108s">Kundalini</a>
+                           <li><a href="https://www.youtube.com/watch?v=FItKQ_7yy5k">Yin</a>
+                           <li><a href="https://www.youtube.com/watch?v=Ocg3InAEZMU">Bikram</a>
+                           <li><a href="https://www.youtube.com/watch?v=jgUNozt1YZE">Ashtanga</a>
+                            
+                               </li>
+                           <!-- <li><a href="#"></a></li> -->
+                           
+                        </ul>
+                      </div>
+                         </li>
+                     <!-- <li><a href="#"></a></li> -->
+                     
+                  </ul>
+                </div>
+              </li>
+
+              <li>
+                <a href="#">Meditation<i class="fa-solid fa-chevron-down" style="color: #000000;"></i></a>
+                <div class="sub-menu-1">
+                  <ul>
+                     <li><a href="https://www.youtube.com/watch?v=6p_yaNFSYao">Mindfulness</a></li>
+                     <li><a href="https://www.youtube.com/watch?v=G0QdWOcB6Ho">Spiritual </a></li>
+                     <li><a href="https://www.youtube.com/watch?v=ijfLsKg8jFY">Mantra</a></li>
+                     <li><a href="https://www.youtube.com/watch?v=iBU3d-MTWsU&list=PLPJVlVRVmhc4_4WqjBXuWXB_0MQunBEjb">Vipassana</a></li>
+                     <li><a href="https://www.youtube.com/watch?v=xa4ODaKKchI">Movement</a></li>
+                     <li><a href="https://www.youtube.com/watch?v=fbX5eNAbpeo">Transcendental</a></li>
+                     
+                  </ul>
+                </div>
+              </li>
+
+              <li>
+                <a href="#">Channels<i class="fa-solid fa-chevron-down" style="color: #000000;"></i></a>
+                <div class="sub-menu-1">
+                  <ul>
+                     <li><a href="https://www.youtube.com/@YogaHindiShilpaShetty">Yoga in Hindi</a></li>
+                     <li><a href="https://www.youtube.com/@satvicyoga">Satvic Yoga</a></li>
+                     <li><a href="https://www.youtube.com/@YogaWithBird">Yoga With Bird</a></li>
+                     <li><a href="https://www.youtube.com/@SiddhiYogaHindi">Siddhi Yoga Hindi</a></li>
+                     <li><a href="https://www.youtube.com/@theyogainstituteofficial">The Yoga Institute 
+                    </a></li>
+                    
+                     
+                  </ul>
+                </div>
+              </li>
+            </ul>
+        </div>
+         
+        <div class="nav-ul">
+
+          <ul>
+              
+
+      <li><a href="searchitem.html" class="hv" id="search_nav">
+        <i class="fa-solid fa-magnifying-glass"></i>
+        <span class="nav-item" style="font-family: Nunito;">Search here</span>
+      </a></li>
+            
+           <li><a href="./Pricing.html">
+           <button class="btn">Search For Free Trial</button></a></li>
+          
+       </ul>
+        </div>
+            
+    </div>
+       
+    </div>
+
+    
+  
+  <div class="side-nav" id="sideNav">
+
+    <li>
+        <a href="./Project.html" class="hv">
+          <i class="fa-solid fa-house"></i>
+          <span class="nav-item" style="font-family: Nunito;">HOME</span>
+        </a></li>
+  
+        <li><a href="./musiccards.html" class="hv">
+            <i class="fa-sharp fa-solid fa-music"></i>
+          <span class="nav-item" style="font-family: Nunito;">MEDITATION</span>
+        </a></li>
+  
+        <li><a href="https://www.youtube.com/@theyogainstituteofficial" class="hv">
+            <i class="fa-sharp fa-solid fa-sun"></i>
+          <span class="nav-item" style="font-family: Nunito;">PRANAYAMA</span>
+        </a></li>
+  
+        <li><a href="#" class="hv">
+            <i class="fa-sharp fa-solid fa-layer-group"></i>
+          <span class="nav-item" style="font-family: Nunito;">COURSES</span>
+        </a></li>
+  
+        <li><a href="#" class="hv">
+          <i class="fa-solid fa-flag-checkered"></i>
+          <span class="nav-item" style="font-family: Nunito;">CHALLENGES</span>
+        </a></li>
+
+        <li><a href="./teachers.html" class="hv">
+          <i class="fa-sharp fa-solid fa-user"></i>
+        <span class="nav-item" style="font-family: Nunito;">OUR TEACHERS</span>
+      </a></li>
+
+      <li><a href="yogadiet.html" class="hv">
+        <i class="fa-sharp fa-solid fa-stethoscope"></i>
+      <span class="nav-item" style="font-family: Nunito;"> DIET PLAN</span>
+    </a></li>
+
+           
+  
+       
+      
+  </div>
+  <button onclick="toggleNav()" style="display: none;">Toggle Side Nav</button>
+
+           
+       <section class="sec1">
+
+        <div class="container2">
+          <div class="container2-para">
+           <h1>YOGA HAS A MANY MEANINGS...</h1>
+           <h1><span class="auto-type"></span></h1>
+
+           <p>WHAT IT WILL MEAN TO <span id="you">YOU?</span></p>
+
+          </div>
+
+          <div class="container-li">
+            <h2>Begin your journey here with access to:</h2>
+              <ul>
+
+                <li>3000+ on demand yoga practices ranging from 3-90 minutes to enhance all aspects of life</li>
+                <li>700+ meditations to hone your mind and reach your potential</li>
+                <li>100+ pranayama practices to help you get centered</li>
+                <li>2700+ articles to expand your knowledge</li>
+                <li>300+ courses and challenges to help your journey</li>
+
+              </ul>
+
+              <h2>Activate your free trial today. Cancel anytime!</h2>
+          </div>
+
+          <div class="btn-container">
+            <button class="btn1"><a href="registerpage.php">Sign in</a></button>
+            <button class="btn1" id="bt"><a href="loginpage.php">Register</a></button>
+
+          </div>
+
+         
+
+     </div>
+       </section>
+        
+
+    <section class="sec3">
+           <div class="sec3-header">
+              <h2 style="font-size: 35px; text-align: center;width: 800px;">Yoga Does Not Just Change The Way We See Things,It Transforms The Persons Who Sees.
+              <p style="font-family: Nunito; font-size: 20px;">Stay motivated by customizing and tracking your daily yoga<br> routine.</p>
+           </div>
+
+              
+           <section class="secMain">
+            <div class="paras">
+                <p class="sectionTag text-big big-text">
+                  BUILD A PERSONALIZED CONTENT LIBRARY
+                </p>
+                <!-- <p class="sectionSubTag text-small small-text">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium esse similique iure itaque pariatur magnam vel alias odio, aliquid quae consequatur laborum autem magni doloremque dolore odit consequuntur. Error, ducimus. Lorem ipsum dolor sit amet consectetur, adipisicing elit. Blanditiis, maxime exercitationem. Veritatis tempore perferendis non repudiandae explicabo molestias dolorum vitae reiciendis, aut ea eveniet, placeat delectus at consectetur doloremque dignissimos.
+                </p> -->
+            </div>
+            <div class="thumbnail">
+                <img src="https://media.istockphoto.com/id/1298958274/photo/3d-illustration-of-meditating-man-sitting-on-the-floor-cartoon-smiling-businessman-in-yoga.jpg?s=612x612&w=0&k=20&c=cb_OA60EfnvaVJ6c5VslunKPmW_IJzV8kte3uCfvxaw=" alt="laptop1" height="500px" width="700px" class="pic2">
+            </div>
+          </section>
+    
+          <section class="secLeft">
+            <div class="paras">
+                <p class="sectionTag text-big big-text">
+                  CREATE CUSTOM PLAYLISTS AROUND YOUR FAVORITE THEMES OR POSES (AND SHARE THEM WITH YOUR FRIENDS)!
+                </p>
+                <!-- <p class="sectionSubTag text-small small-text">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium esse similique iure itaque pariatur magnam vel alias odio, aliquid quae consequatur laborum autem magni doloremque dolore odit consequuntur. Error, ducimus. Lorem ipsum dolor sit amet consectetur, adipisicing elit. Blanditiis, maxime exercitationem. Veritatis tempore perferendis non repudiandae explicabo molestias dolorum vitae reiciendis, aut ea eveniet, placeat delectus at consectetur doloremque dignissimos.
+                </p> -->
+            </div>
+            <div class="thumbnail">
+                <img src="https://media.istockphoto.com/id/1225266726/vector/yoga-studios-streaming-online-classes-girl-watching-online-sport-tutorials-on-a-laptop-and.jpg?s=612x612&w=0&k=20&c=kCRvjm0MLGX8Ws6k5mp64jNllX-MIuOhhSisRaJRkas=" alt="laptop2" height="500px" width="700px" class="pic2">
+            </div>
+          </section>
+    
+          <section class="secMain">
+            <div class="paras">
+                <p class="sectionTag text-big big-text">
+                  BUILD YOUR YOGA AND MEDITATION ROUTINE BY SETTING WEEKLY GOALS AND TRACKING YOUR PROGRESS
+                </p>
+                <!-- <p class="sectionSubTag text-small small-text">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium esse similique iure itaque pariatur magnam vel alias odio, aliquid quae consequatur laborum autem magni doloremque dolore odit consequuntur. Error, ducimus. Lorem ipsum dolor sit amet consectetur, adipisicing elit. Blanditiis, maxime exercitationem. Veritatis tempore perferendis non repudiandae explicabo molestias dolorum vitae reiciendis, aut ea eveniet, placeat delectus at consectetur doloremque dignissimos.
+                </p> -->
+            </div>
+            <div class="thumbnail">
+                <img src="https://media.istockphoto.com/id/1393359113/photo/3d-sporty-woman-doing-exercises-on-yoga-mat.jpg?s=612x612&w=0&k=20&c=YqJitrh6hYdDwXtw2ngTGbDsg3Mw7wZsrR291nh6epU=" alt="laptop1" height="500px" width="700px" class="pic2">
+            </div>  
+          </section>
+
+    </section>
+
+
+             <section class="teacher-sec">
+            <div class="gallery-wrap1-para">
+              <h1 style="font-family: Nunito; font-size: 30px;">CONNECT AND GROW WITH TOP YOGA TEACHERS</h1>
+              <p style="font-family: Nunito;">Practice with some of the best yoga teachers in the world,<br> across a variety of styles.</p>
+           </div>
+               
+            <div class="gallery-wrap1">
+              <img src="./next.png" alt="" id="nextBtn">
+           <div class="gallery1">
+               <div>
+                  <span>
+                    <a href="./info1.html"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/93/Hansa_J_Yogendra.jpg/800px-Hansa_J_Yogendra.jpg" alt="img"><h3 style="font-family: Nunito;">Dr.Hasanji Yogendra</h3>
+                    </a>
+                    </span>
+
+                    <span>
+                      <a href="./info2.html"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/21/Sadhguru-Jaggi-Vasudev.jpg/800px-Sadhguru-Jaggi-Vasudev.jpg" alt="img"><h3 style="font-family: Nunito;">Sadhguru</h3>
+                      </a>
+                      </span>
+
+                      <span>
+                        <a href="./info3.html"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/fb/Swami_Ramdev_in_2016.jpg/330px-Swami_Ramdev_in_2016.jpg" alt="img"><h3 style="font-family: Nunito;">Swami Ramdev</h3>
+                        </a>
+                        </span>
+                   
+                  <!-- <span><img src="./img1.jpg" alt="img"><h3>Aditya Jadhav</h3></span>
+                  <span><img src="./img1.jpg" alt="img"><h3>Aditya Jadhav</h3></span> -->
+               
+               </div>
+
+               <div>
+                <span>
+                  <a href="./info4.html"><img src="https://upload.wikimedia.org/wikipedia/en/3/36/Tirumalai_Krishnamacharya.png" alt="img" height="300px"><h3 style="font-family: Nunito;">Tirumalai Krishnamacharya</h3>
+                  </a>
+                  </span>
+                  
+                  <span>
+                    <a href="./info5.html"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/34/Swami_Shivananda_Liebe.jpg/330px-Swami_Shivananda_Liebe.jpg" alt="img"><h3 style="font-family: Nunito;">Sivananda Saraswati
+                    </h3>
+                    </a>
+                    </span>
+
+                    <span>
+                      <a href="./info6.html"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT7S8Eagme5g2HKQSJ4ukQOLSiqyLMGEOp5YWhmnkeAbSw7wAs8Fwf7ycs4fh0h9OsLFXE&usqp=CAU" alt="img"><h3 style="font-family: Nunito;">Sharath Jois</h3>
+                      </a>
+                      </span>
+              
+              </div>
+           
+           </div>
+           <img src="./back.png" alt="" id="backBtn">
+          
+          </div>
+
+          <div class="sec4-footer">
+            <p>Our specially selected teachers come from a multitude of<br> educational backgrounds and experiences, and teach to a <br>variety of individuals just like you! Plus, we think they’re <br>awesome people too!</p>
+          </div>
+           </section>
+          </section>
+
+
+           <section class="sec6">
+            <!-- <div class="sec6-header">
+               <h2>TAKE CHARGE OF YOUR PATH</h2>
+               <p>Stay motivated by customizing and tracking your daily yoga<br> routine.</p>
+            </div> -->
+ 
+               
+            <section class="secMain6">
+             <div class="paras6">
+                 <p class="sectionTag text-big big-text">
+                  EXPERIENCE YOGA IN A WHOLE NEW WAY
+                 </p>
+                 <p class="sectionSubTag text-small small-text">
+                  Get comfy, lean back and explore the ancient wisdom <br>of yoga with our docs and films.
+                 </p>
+             </div>
+             <div class="thumbnail">
+                 <img src="https://media.istockphoto.com/id/1353664635/vector/cartoon-drawing-of-buddhist-monk.jpg?s=612x612&w=0&k=20&c=mn-CqgrdxqaoY4BWF6ggD8Z76OikCdqDyftJTsimVic=" alt="laptop1" height="500px" width="700px" class="pic2">
+             </div>
+           </section>
+     
+           <section class="secLeft6">
+             <div class="paras">
+                 <p class="sectionTag text-big big-text">
+                  DIG DEEPER WITH MEMBER COURSES
+                 </p>
+                 <p class="sectionSubTag text-small small-text">
+                  Learn everything from yoga history and philosophy <br>to yoga therapy with our online yoga courses.<br> Uplevel your training with our exclusive courses,<br> which are eligible for continuing education credits<br> with Yoga Alliance.
+                 </p>
+             </div>
+             <div class="thumbnail">
+                 <img src="https://media.istockphoto.com/id/1473758014/vector/yoga-woman-on-yoga-cushion-illustration.jpg?s=612x612&w=0&k=20&c=aXXgIjsGoQmRZ8kojHrKSr-6IJDVXD1xM6eUujq1T6I=" alt="laptop2" height="500px" width="700px" class="pic2">
+             </div>
+           </section>
+     
+           <section class="secMain6">
+             <div class="paras">
+                 <p class="sectionTag text-big big-text">
+                  DISCOVER NEW CHALLENGES
+                 </p>
+                 <p class="sectionSubTag text-small small-text">
+                  Move and flow with a series of classes designed to help you build new skills, get in the groove, train<br> your brain, and more.
+                 </p>
+             </div>
+             <div class="thumbnail">
+                 <img src="https://s3.ap-southeast-1.wasabisys.com/designtemplate.tech/tue-jan-10-2023-1-59-pm90538.webp" alt="laptop1" height="500px" width="700px" class="pic2">
+             </div>
+           </section>
+ 
+     </section>
+
+
+         <section class="sec7">
+          <div class="sec7-div">
+               <p class="p1">EXPERIENCE THE BEYOND YOGA DIFFERENCE</p>
+               <p class="p2">We've spent the last 30 years becoming an indispensable compendium of yoga practices and resources like no other.<br> Since 1991, Yoga International has been a trusted source leading students to the best yoga classes and teachers in the world so<br> they can experience the transformational health benefits of yoga.</p>
+
+               <p class="p3">While other platforms have shifted to pilates and fitness focused content, we've stayed true to yoga and our mission to help <br>you find the path that works best for you.</p>
+              </div>
+         </section>
+
+         <div class="sec2-footer8">
+          <p style="font-size: 30px;">START YOUR JOURNEY TO WELL-BEING AND TRANSFORMATION NOW!</p>
+          <a href="#" class="footer-btn"><button>START YOUR FREE TRIAL</button></a>
+      </div>
+
+
+         <section class="sec8">
+      
+            <div class="container8">
+                 
+              <div class="element1">
+                  <a href="https://www.zeptonow.com/cn/fruits-vegetables/fresh-fruits/cid/64374cfe-d06f-4a01-898e-c07c46462c36/scid/09e63c15-e5f7-4712-9ff8-513250b79942" id="ele1"> Yoga Classes</a>
+                  <div class="line"></div>
+                  <a href="#">Vinyasa</a>
+                  <a href="#"> Hatha Yoga</a>
+                  <a href="#"> Yin</a>
+                  <a href="#"> Kundalini</a>
+                  <a href="#"> Prenatal and Postpartum</a>
+                  <a href="#"> Vipsanna</a>
+              </div>
+      
+      
+              <div class="element1">
+                  <a href="#" id="ele1">Meditations</a>
+                  <div class="line"></div>
+                  <a href="#"> Sleep Better</a>
+                  <a href="#">Reduce Stress</a>
+                  <a href="#"> Morning Meditations</a>
+                  <a href="#">Get Focused</a>
+              </div>
+      
+              <div class="element1">
+                  <a href="#" id="ele1">Pranayama</a>
+                  <div class="line"></div>
+                  <a href="#">  Calming</a>
+                  <a href="#"> Energizing</a>
+                  <a href="#">Reduce Stress</a>
+                  
+              </div>
+         
+                  <div class="element1">
+                      <a href="#" id="ele1">Articles</a>
+                      <div class="line"></div>
+                      <a href="#">Practice</a>
+                      <a href="#"> Yoga Therapy</a>
+                      <a href="#">Ayurveda</a>
+                      <a href="#">Poses</a>
+                      <a href="#">For Teachers</a>
+                      <a href="#">Tutorials</a>
+                      
+                  </div>
+                     
+                  <div class="element1">
+                      <a href="#" id="ele1">More</a>
+                      <div class="line"></div>
+                      <a href="#">Courses</a>
+                      <a href="#">Challenges</a>
+                      <a href="#">Docs & Films</a>
+                      <a href="#">Our Teachers</a>
+                      <a href="#">Premium Trainings</a>
+                      <a href="#">Podcasts</a>
+                      
+                  </div>
+      
+              </div>
+
+             <div class="container9">
+               <div class="emoji">
+               <ul>
+                <li> <a href="https://www.facebook.com/"><i class="fa-brands fa-facebook" style="color: #ef743c;"></i></a></li>
+                <li> <a href="https://www.instagram.com/"><i class="fa-brands fa-instagram" style="color: #ef743c;"></i></a></li>
+                <li> <a href="https://twitter.com/home"><i class="fa-brands fa-twitter" style="color: #ef743c;"></i></a></li>
+               </ul>
+               
+               </div>
+            </div>
+
+            <p id="para-foot">All Content © Copyright Beyond Yoga 2024. All Rights Reserved.</p>
+
+              
+          </section>
+
+
+         
+            
+           
+    
+  <!-- </nav> -->
+
+  <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
+  <script src="script.js"></script>
+  <script src="script3.js"></script>
+
+  
+  <script>
+
+    var typed=new Typed(".auto-type",{
+      strings:["RELAXATION","VALUES","COMPANSATION","STILLNESS","PLAY","WELLNESS","CLARITY","LIFE","CALM","TRANSFORMATION"],
+      typeSpeed:100,
+      backSpeed:10,
+      looped:true
+    });
+
+    typed.onComplete = function(self) {
+    // Reset the animation
+    self.reset();
+};
+
+
+    let listVideo=document.querySelectorAll('.video-list .vid');
+    let mainVideo=document.querySelector('.main-video video');
+
+    let title=document.querySelector('.main-video .title');
+
+    listVideo.forEach(video =>{
+        video.onclick = () =>{
+            listVideo.forEach(vid =>vid.classList.remove('active'));
+            video.classList.add('active');
+              
+            if(video.classList.contains('active')){
+              let src = video.children[0].getAttribute('src');
+              mainVideo.src = src;
+              
+              let text =video.children[1].innerHTML;
+              title.innerHTML=text;
+              
+            };
+        };
+    });
+
+
+
+        let scrollContainer=document.querySelector(".gallery");
+        let backbtn=document.getElementById("backbtn");
+
+        let nextbtn=document.getElementById("nextbtn");
+
+        scrollContainer.addEventListener("wheel",(evt)=>{
+          evt.preventDefault();
+          scrollContainer.scrollLeft +=evt.deltaY;
+          scrollContainer.style.scrollBehavior = "auto";
+
+        });
+
+        nextbtn.addEventListener("click", ()=>{
+          scrollContainer.style.scrollBehavior = "smooth";
+          scrollContainer.scrollLeft -= 900;
+        });
+
+        backbtn.addEventListener("click", ()=>{
+          scrollContainer.style.scrollBehavior = "smooth";
+          scrollContainer.scrollLeft += 900;
+        });
+        
+        let scrollContainer1=document.querySelector(".gallery1");
+        let backbBtn=document.getElementById("backBtn");
+
+        let nextBtn=document.getElementById("nextBtn");
+
+        scrollContainer1.addEventListener("wheel",(evt)=>{
+          evt.preventDefault();
+          scrollContainer1.scrollLeft +=evt.deltaY;
+          scrollContainer1.style.scrollBehavior = "auto";
+
+        });
+
+        nextBtn.addEventListener("click", ()=>{
+          scrollContainer1.style.scrollBehavior = "smooth";
+          scrollContainer1.scrollLeft += 400;
+        });
+
+        backBtn.addEventListener("click", ()=>{
+          scrollContainer1.style.scrollBehavior = "smooth";
+          scrollContainer1.scrollLeft -= 400;
+        });
+
+  </script>
+
+
+  
+</body>
+</html>

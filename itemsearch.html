@@ -1,0 +1,906 @@
+ <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Kode+Mono:wght@400..700&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            list-style: none;
+        }
+
+          body {
+            width: 100%;
+            height: 100vh;
+            background: #fff;
+            margin: auto;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+          }
+
+          .container {
+            margin-top: 10%;
+            width: 1200px;
+            height: auto;
+            background: #eee;
+            box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+            padding: 20px;
+         margin-top: 100%;
+          }
+
+          .container::-webkit-scrollbar {
+            display: none;
+          }
+
+          
+
+          .navbar form {
+               width: 50%;
+               display: flex;
+               flex-direction: row;
+               /* justify-content: center; */
+               /* align-items: center; */
+               border: 1px solid rgb(82,74,235);
+               border-radius: 4px;
+               background-color: white;
+               padding: 10px;
+          }
+
+          .navbar form input {
+            outline: none;
+            border: none;
+            box-shadow: none;
+            width: 100%;
+            font-size: 20px;
+            font-weight: 600;
+            padding: 8px 10px;
+          }
+
+          .navbar form i {
+            padding-left: 10px;
+        
+          }
+ 
+          .product {
+            display: flex;
+            align-items: center;
+            cursor: pointer;
+            padding-bottom: 20px;
+            padding-top: 20px;
+           
+            
+          }
+
+          .product img {
+              width: 70px;
+              height: 70px;
+              object-fit: cover;
+              border-radius: 5px;
+              margin-top: 10px;
+          }
+
+          .product .p-details {
+             padding-left: 15px;
+          }
+
+          .product .p-details h2 {
+            font-size: 20px;
+          }
+
+          .product .p-details h3 {
+            font-size: 18px;
+          }
+          .product-list {
+            padding: 20px 0;
+          }
+
+
+          .main {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-top: 10%;
+        }
+
+        .main1 {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            /* margin-top: 20%; */
+        }
+
+        .zoom {
+            transform: scale(1.2); /* Increase the scale for zoom effect */
+            transition: transform 0.5s ease; /* Add transition effect */
+        }
+
+        .cards{
+            width: 20%; /* Adjust as needed */
+            height: 400px; /* Adjust as needed */
+            max-width: 300px; /* Limiting maximum width for responsiveness */
+            background-color: white;
+
+            margin: 40px;
+            /* box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset; */
+            box-shadow: 2px 2px 10px black;
+            display: inline-block;
+            cursor: pointer; /* Add cursor pointer to indicate clickability */
+        }
+
+        .cards a {
+            width: 100%;
+        }
+
+
+
+         .image img{
+            width: 100%;
+            height: 250px;
+            object-fit: cover; /* Ensure the image fills the container */
+           
+        }
+
+        .title {
+            text-align: center;
+            margin-top: 5px;
+            color: #1976d2;
+            font-family: "Nunito Sans";
+        }
+
+        .des {
+            text-align: center;
+            padding: 5px;
+        }
+
+        button{
+            margin-top: 30px;
+            margin-bottom: 30px;
+            background-color: white;
+            border: 1px solid black;
+            padding: 5px;
+            border-radius: 5px;
+        }
+
+        button:hover {
+            background-color: black;
+            color: white;
+            transition: .2s;
+            cursor: pointer;
+        }
+
+
+        .side-nav{
+      top: 97px;
+      position: fixed;
+      left: 0;
+      bottom: 0;
+      height: 88%;
+      background-color:#26292d;
+      width: 90px;
+      overflow: hidden;
+      transition: width 0.2s linear;
+      box-shadow: 0 20px 35px rgba(0,0,0,0.1);
+      z-index: 1000;
+  }
+
+  .logo{
+    text-align: center;
+    display: flex;
+    transition: all 0.5s ease;
+    margin: 10px 0 0 10px;
+
+
+  }
+
+  .logo img{
+    width: 90px;
+    height: 90px;
+    border-radius: 50%;
+
+  }
+
+
+    a{
+       position: relative;
+       color:white;
+       font-size: 20px;
+       display: table;
+       width: 300px;
+       padding: 10px;
+    }
+
+    .fa-solid{
+      position: relative;
+      width: 70px;
+      height: 40px;
+      top: 14px;
+      font-size: 20px;
+      text-align: center;
+    }
+
+    #logoicon{
+          font-size: 30px;
+    }
+
+    .navbar{
+          display: flex;
+           justify-content: space-between;
+          align-items: center;
+          height:100px;
+          padding-bottom: 10px;
+          background-color: white;
+          box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+          position: fixed;
+          width: 100%;
+          top: 0;
+          z-index: 1000;
+        
+    }
+
+    .top-text{
+       text-align: center;
+       font-family: "Kode Mono", sans-serif;
+       font-size: 30px;
+    }
+    .navbar a{
+        color: black;
+        margin-top: 15px;
+    }
+
+    .top-logo a{
+        font-size: 30px;
+    }
+
+    .top-logo i{
+      font-size: 35px;
+      text-align: center;
+      /* margin-bottom: 30px; */
+  }
+  
+    .nav-item{
+      position: relative;
+      top: 15px;
+      margin-left: 10px;
+      font-family:"san-sarif";
+      letter-spacing: 2px;
+    }
+
+    #nav-text{
+         display: flex;
+         justify-content: center;
+         font-size: 30px;
+         color: rgb(216, 148, 2);
+    }
+
+    .hv:hover{
+      background: #1976d2;
+    }
+
+    .side-nav:hover{
+      width: 280px;
+      transition: all 0.5s ease;
+    }
+
+    .nav-ul {
+      display: flex;
+      justify-content: flex-end;
+    }
+
+    .nav-ul ul{
+      list-style: none;
+      margin: 0;
+      padding: 0;
+
+    }
+
+    .fa-heart-pulse {
+         top: 7px;
+         /* margin-right: 10px; */
+    }
+
+
+    .nav-ul li {
+      display: inline-block;
+      margin-right: 10px; /* Adjust spacing between items */
+    }
+
+    .btn{
+        padding: 15px 15px;
+        font-size: 15px;
+        border-radius: 10px;
+        background-color:rgb(239, 116, 60);
+        width: 100%;
+        display: inline-block;
+        cursor: pointer;
+    
+    }
+
+
+    .container1{
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          margin-top: 10%;
+    }
+
+    
+
+    .show {
+  width: 280px; /* Adjust width as needed */
+  transition: all 0.5s ease;
+}
+
+.sec2-footer{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin-top: 5%;
+        padding-bottom: 50px;
+    }
+
+    .sec2-footer button{
+
+            padding: 20px 40px;
+            border-radius: 30px;
+            text-align: center;
+            margin-top: 20px;
+            font-size: 15px;
+            background-color: rgb(239, 116, 60);
+            cursor: pointer;
+
+            }
+
+.sec2-footer p{
+        font-size: 30px;
+        color: black;
+        letter-spacing: 3px;
+        font-family:"Nunito";
+        font-weight: bold;
+    }
+
+
+.sec8 {
+      width: 100%;
+        background-color: #26292d;
+        padding-top: 5%;
+        padding-bottom: 10%;
+        margin-top: 5%;
+    }
+
+
+.container8 {
+
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-left: 250px;
+    margin-right: 20px;
+    color: white;
+    width: 900px;
+
+    
+   }
+
+   .element1{
+    display: flex;
+    flex-direction: column;
+    gap: 0px;
+    font-size: 10px;
+    line-height: 40px;
+    left: 30px;
+    
+   }
+      
+   .element1 a{
+      color: white;
+      font-size: 20px;
+      font-family: "Nunito";
+   }
+   .line{
+      border-bottom: 1px solid black;
+      width: 70%;
+   }
+
+   #ele1 {
+      color: #1976d2;
+   }
+      
+
+   .emoji ul {
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+    font-size: 30px;
+    margin-left: 5px;
+    margin-top: 5%;
+  }
+  
+  .emoji a {
+    font-size: 30px;
+
+  }
+  
+  .container9 {  
+    margin-top: 20px;
+    display: flex;
+    flex-direction: row;
+    margin-left: 15%;
+    
+  }
+
+    #para-foot {
+
+         color: white;
+         margin-left: 250px;
+         margin-top: 5%;
+
+    }
+
+    @media only screen and (max-width: 600px) {
+  /* Adjustments for smaller screens */
+
+     
+      .navbar {
+        margin-left: 67%;
+         width: 100%;
+        height: auto; /* Change navbar height to fit content */
+        padding: 10px; /* Add padding to navbar */
+        display: flex;
+        flex-direction: row;
+    }
+
+    .container::-webkit-scrollbar {
+            display: none;
+          }
+
+    
+    
+
+    .top-logo {
+        margin-bottom: 20px; /* Add margin at the bottom of the logo */
+    }
+
+    .nav-ul {
+        justify-content: center; /* Center align navigation links */
+    }
+
+    .nav-ul li {
+        margin: 0 10px; /* Adjust spacing between navigation links */
+    }
+
+    .container1,
+    .main,
+    .main1 {
+       display: grid;
+       grid-template-columns: repeat(2,1fr);
+       justify-content: center;
+       align-items: center;
+    }
+
+    .container {
+        width: 200%;
+         margin-top: 800%;
+         margin-left: 200%;
+         
+    
+    }
+
+    .cards {
+        width: 90%; /* Adjust card width for smaller screens */
+    }
+
+    
+    .nav-ul {
+        margin-top: 10px;
+    }
+
+    .side-nav {
+        width: 30%;
+        height: auto;
+        top: 70px;
+        left: -100%;
+        transition: 0.5s;
+    }
+
+    .sec1-text p {
+        margin-left: 30%;
+        margin-top: 5%;
+        font-size: 35px;
+        text-align: center;
+    }
+
+
+    .show {
+        left: 0;
+    }
+
+    .nav-ul ul {
+        display: none;
+        position: absolute;
+        width: 100%;
+        background: #26292d;
+        top: 70px;
+    }
+
+    .nav-ul:hover ul {
+        display: block;
+    }
+
+    .nav-ul ul li {
+        display: block;
+        text-align: center;
+    }
+
+    .nav-ul ul li a {
+        padding: 10px;
+    }
+
+  
+
+    /* .navbar form {
+        width: 20%;
+          margin-left: 30%;
+    } */
+
+    .sec8 {
+        width: 500%;
+    }
+    .sec2-footer {
+        width: 500px;
+         margin-left: 80%;
+         text-align: center;
+         margin-top: 50px;
+    }
+    .container9 {
+         margin-left: 50%;
+    }
+
+    .container8 {
+        margin-left: 50%;
+        display: grid;
+        grid-template-columns: repeat(2,1fr);
+    }
+    
+}
+
+
+
+
+
+
+    </style>
+</head>
+<body>
+
+    <div class="navbar">
+        <div class="nav-icon">
+            <i class="fa-sharp fa-solid fa-bars" id="logoicon" onclick="toggleNav()" style="cursor: pointer;"></i>
+        </div>
+
+        <form>
+            
+            <i class="fa-solid fa-magnifying-glass"></i>
+            <input type="text " name="" id="search-item" placeholder="search here..." onkeyup="search()">
+          </form>
+
+        <div class="top-logo">
+            <p class="top-text">
+              <i class="fa-solid fa-heart-pulse fa-beat" id="logo-icon" style="color: #ef743c;"></i>Beyond <span id="yoga">Yoga</span></p>
+        </div>
+         
+        <div class="nav-ul">
+
+          <ul>
+                
+            <!-- <li><a href=""><i class="fa-sharp fa-solid fa-magnifying-glass"></i></a></li>
+           <li><a href="#">Sign-in</a></li> -->
+           <li><a href="./Pricing.html">
+           <button class="btn">Search For Free Trial</button></a></li>
+       </ul>
+        </div>
+            
+    </div>
+
+      
+    <div class="side-nav" id="sideNav">
+
+        <li>
+            <a href="./Project.html" class="hv">
+              <i class="fa-solid fa-house"></i>
+              <span class="nav-item" style="font-family: Nunito;">HOME</span>
+            </a></li>
+      
+            <li><a href="./musiccards.html" class="hv">
+                <i class="fa-sharp fa-solid fa-music"></i>
+              <span class="nav-item" style="font-family: Nunito;">MEDITATION</span>
+            </a></li>
+      
+            <li><a href="https://www.youtube.com/@theyogainstituteofficial" class="hv">
+                <i class="fa-sharp fa-solid fa-sun"></i>
+              <span class="nav-item" style="font-family: Nunito;">PRANAYAMA</span>
+            </a></li>
+      
+            <li><a href="#" class="hv">
+                <i class="fa-sharp fa-solid fa-layer-group"></i>
+              <span class="nav-item" style="font-family: Nunito;">COURSES</span>
+            </a></li>
+      
+            <li><a href="#" class="hv">
+              <i class="fa-solid fa-flag-checkered"></i>
+              <span class="nav-item" style="font-family: Nunito;">CHALLENGES</span>
+            </a></li>
+    
+            <li><a href="./teachers.html" class="hv">
+              <i class="fa-sharp fa-solid fa-user"></i>
+            <span class="nav-item" style="font-family: Nunito;">OUR TEACHERS</span>
+          </a></li>
+    
+          <li><a href="yogadiet.html" class="hv">
+            <i class="fa-sharp fa-solid fa-stethoscope"></i>
+          <span class="nav-item" style="font-family: Nunito;"> DIET PLAN</span>
+        </a></li>
+    
+      </div>
+      <button onclick="toggleNav()">Toggle Side Nav</button>
+    
+
+    <section class="container">
+        
+            <div class="main">
+                    <div class="cards">
+                        <a href="musiccards.html">
+                            <div class="image">
+                                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRUVvc8wjTTDv7NU49Fe40eall2jt9Kmansbw&usqp=CAU" alt="">
+                            </div>
+                        </a>
+                        
+                        <div class="title">
+                            <h2>Meditational Music</h2>
+                        </div>
+                        <div class="des">
+                            <p>Write a description here</p>
+                            <p id="p1">Beyond Yoga</p>
+                        </div>
+                    </div>
+        
+                
+            
+                    <div class="cards">
+                        <a href="teachers.html">
+                            <div class="image">
+                                <img src="./yogateachers.jpg" alt="">
+                            </div>
+                        </a>
+                        
+                        <div class="title">
+                            <h2>Our Teachers</h2>
+                        </div>
+                        <div class="des">
+                            <p>Write a description here</p>
+                            <p id="p1">Beyond Yoga</p>
+                        </div>
+                    </div>
+        
+                    <div class="cards">
+                        <a href="yogadiet.html">
+                            <div class="image">
+                                <img src="https://i.pinimg.com/564x/84/1a/d0/841ad01ddf54b8af3d205d58a41cbe49.jpg " alt="">
+                            </div>
+                        </a>
+                        
+                        <div class="title">
+                            <h2>Your Diet</h2>
+                        </div>
+                        <div class="des">
+                            <p>Write a description here</p>
+                            <p id="p1">Beyond Yoga</p>
+                        </div>
+                    </div>
+        
+            
+                    <div class="cards">
+                        <a href="specific_yoga_poses.html">
+                            <div class="image">
+                                <img src="sepcific_yoga _poses.jpeg" alt="">
+                            </div>
+                        </a>
+                        
+                        <div class="title">
+                            <h2>Specific yoga poses</h2>
+                        </div>
+                        <div class="des">
+                            <p>Write a description here</p>
+                            <p id="p1">Beyond Yoga</p>
+                        </div>
+                    </div>
+        
+                <!-- Add more card elements as needed -->
+            
+            </div>
+                 
+            <div class="main1">
+                <!-- Add more card elements as needed -->
+                <div class="cards">
+                    <a href="yoga_channel.html">
+                        <div class="image">
+                            <img src="https://media.istockphoto.com/id/1348212541/photo/red-play-icon-button-on-white-background-social-media-and-sign-concept-3d-illustration.webp?b=1&s=170667a&w=0&k=20&c=-8wc9kvDbL1P-j-1I5cpFDIo9z_mISgylwYdfDzy138=" alt="">
+                        </div>
+                    </a>
+                    
+                    <div class="title">
+                        <h2>You tube channels</h2>
+                    </div>
+                    <div class="des">
+                        <p>Write a description here</p>
+                        <p id="p1">Beyond Yoga</p>
+                    </div>
+                </div>
+    
+            
+                <div class="cards">
+                    <a href="Inspirational Quotes.html">
+                        <div class="image">
+                            <img src="https://media.istockphoto.com/id/1310887469/photo/stones-with-words-mind-body-soul-and-flower-petals-in-water-space-for-text-zen-lifestyle.webp?b=1&s=170667a&w=0&k=20&c=6sBIMupS9ZscZlrVqYSNFZzaP8N9gaT7DtLsueMiaJU=" alt="">
+                        </div>
+                    </a>
+                    
+                    <div class="title">
+                        <h2>Inspirational Quotes</h2>
+                    </div>
+                    <div class="des">
+                        <p>Write a description here</p>
+                        <p id="p1">Beyond Yoga</p>
+                    </div>
+                </div>
+    
+                <div class="cards">
+                    <a href="Yoga Books.html">
+                        <div class="image">
+                            <img src="https://media.istockphoto.com/id/490366172/photo/good-book-and-cup-of-coffee-in-the-morning.webp?b=1&s=170667a&w=0&k=20&c=SL3Tjcj7_I-YSPuQCZtZ5OZOrDMTUEiGVKlNOqSNEno=" alt="">
+                        </div>
+                    </a>
+                    
+                    <div class="title">
+                        <h2>Yoga Books</h2>
+                    </div>
+                    <div class="des">
+                        <p>Write a description here</p>
+                        <p id="p1">Beyond Yoga</p>
+                    </div>
+                </div>
+    
+            
+                <div class="cards">
+                    <a href="meditation_book.html">
+                        <div class="image">
+                            <img src="https://media.istockphoto.com/id/1334372779/photo/open-book-and-steaming-cup-of-coffee-on-wooden-table.webp?b=1&s=170667a&w=0&k=20&c=P4etbgRrBb326oKlfoy5iVCcqPduXu2CLR4UZq41uXw=" alt="">
+                        </div>
+                    </a>
+                    
+                    <div class="title">
+                        <h2>Meditation Books</h2>
+                    </div>
+                    <div class="des">
+                        <p>Write a description here</p>
+                        <p id="p1">Beyond Yoga</p>
+                    </div>
+                </div>
+    
+    
+            </div>
+            
+
+               
+            
+          
+    </section>
+
+
+    <section class="sec4">
+           
+        <div class="sec2-footer">
+            <p>START YOUR JOURNEY TO WELL-BEING AND TRANSFORMATION NOW!</p>
+            <a href="#" class="footer-btn"><button>START YOUR FREE TRIAL</button></a>
+        </div>
+
+      </section>
+
+    <section class="sec8">
+      
+        <div class="container8">
+             
+          <div class="element1">
+              <a href="https://www.zeptonow.com/cn/fruits-vegetables/fresh-fruits/cid/64374cfe-d06f-4a01-898e-c07c46462c36/scid/09e63c15-e5f7-4712-9ff8-513250b79942" id="ele1"> Yoga Classes</a>
+              <div class="line"></div>
+              <a href="#">Vinyasa</a>
+              <a href="#"> Hatha Yoga</a>
+              <a href="#"> Yin</a>
+              <a href="#"> Kundalini</a>
+              <a href="#"> Prenatal and Postpartum</a>
+              <a href="#"> Vipsanna</a>
+          </div>
+    
+    
+          <div class="element1">
+              <a href="#" id="ele1">Meditations</a>
+              <div class="line"></div>
+              <a href="#"> Sleep Better</a>
+              <a href="#">Reduce Stress</a>
+              <a href="#"> Morning Meditations</a>
+              <a href="#">Get Focused</a>
+          </div>
+    
+          <div class="element1">
+              <a href="#" id="ele1">Pranayama</a>
+              <div class="line"></div>
+              <a href="#">  Calming</a>
+              <a href="#"> Energizing</a>
+              <a href="#">Reduce Stress</a>
+              
+          </div>
+     
+              <div class="element1">
+                  <a href="#" id="ele1">Articles</a>
+                  <div class="line"></div>
+                  <a href="#">Practice</a>
+                  <a href="#"> Yoga Therapy</a>
+                  <a href="#">Ayurveda</a>
+                  <a href="#">Poses</a>
+                  <a href="#">For Teachers</a>
+                  <a href="#">Tutorials</a>
+                  
+              </div>
+                 
+              <div class="element1">
+                  <a href="#" id="ele1">More</a>
+                  <div class="line"></div>
+                  <a href="#">Courses</a>
+                  <a href="#">Challenges</a>
+                  <a href="#">Docs & Films</a>
+                  <a href="#">Our Teachers</a>
+                  <a href="#">Premium Trainings</a>
+                  <a href="#">Podcasts</a>
+                  
+              </div>
+    
+          </div>
+    
+         <div class="container9">
+           <div class="emoji">
+           <ul>
+            <li> <a href="https://www.instagram.com/"><i class="fa-brands fa-facebook" style="color: #ef743c;"></i></a></li>
+            <li> <a href="https://www.instagram.com/"><i class="fa-brands fa-instagram" style="color: #ef743c;"></i></a></li>
+            <li> <a href="https://www.instagram.com/"><i class="fa-brands fa-twitter" style="color: #ef743c;"></i></a></li>
+           </ul>
+           
+           </div>
+        </div>
+    
+        <p id="para-foot">All Content © Copyright Beyond Yoga 2024. All Rights Reserved.</p>
+    
+          
+      </section>
+     
+ 
+    
+
+    
+
+    <script src="script1.js"></script>
+    <script src="script3.js"></script>
+</body>
+</html> 
+
+
